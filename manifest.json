@@ -1,12 +1,12 @@
 {
-  "name": "Polly",
+  "name": "Polly2",
   "description": "Extension created to allow injection of polyfills into websites",
   "manifest_version": 2,
   "developer": {
-    "name": "zakius",
+    "name": "CeruleanSky",
     "url": ""
   },
-  "version": "1.9",
+  "version": "2.0",
   "content_scripts": [
     {
       "all_frames": true,
@@ -15,7 +15,7 @@
         "https://*/*"
       ],
       "js": [
-        "injector.js"
+        "injectorPolly2.js"
       ],
       "run_at": "document_start"
     }
@@ -28,27 +28,34 @@
     "webRequestBlocking"
   ],
   "web_accessible_resources": [
+    "polyfills/_MiscFills.js",
+    "polyfills/Babel/babel.min.js",    
     "polyfills/ResizeObserver.js",
     "polyfills/Webcomponents-Bundle.js",
     "polyfills/Webcomponents-sd.js",
     "polyfills/Webcomponents-ce.js",
+    "polyfills/ES20xx/es2018.js",
+    "polyfills/ES20xx/es2019.js",
+    "polyfills/ES20xx/es2020.js",
+    "polyfills/ES20xx/es2021.js",
+    "polyfills/ES20xx/es2022.js",
     "polyfills/BigInt.js",
     "polyfills/Polyfill.io/AbortController.js",
     "polyfills/Polyfill.io/Array.js",
     "polyfills/Polyfill.io/ArrayBuffer.js",
     "polyfills/Polyfill.io/DataView.js",
     "polyfills/Polyfill.io/Element.js",
-    "polyfills/Polyfill.io/es2018.js",
-    "polyfills/Polyfill.io/es2019.js",
     "polyfills/Polyfill.io/globalThis.js",
     "polyfills/Polyfill.io/Intl.js",
     "polyfills/Polyfill.io/Promise.finally.js",
     "polyfills/Polyfill.io/String.js",
-    "polyfills/Polyfill.io/TypedArrays.js"
+    "polyfills/Polyfill.io/TypedArrays.js",
+    "polyfills/css/EQCSS-polyfills.js",
+	"polyfills/regenerator-runtime.js"
   ],
   "browser_action": {
     "browser_style": true,
-    "default_title": "Polly",
+    "default_title": "Polly2",
     "default_popup": "browserAction.html"
   },
   "background": {
@@ -60,8 +67,8 @@
   },
   "browser_specific_settings": {
     "gecko": {
-      "id": "zakius@polly",
-      "update_url": "https://raw.githubusercontent.com/zakius/Polly/master/updates.json"
+      "id": "CeruleanSky@Polly2",
+      "update_url": "https://raw.githubusercontent.com/CeruleanSky/Polly2/master/updates.json"
     }
   }
 }
